@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="styles.css">
+    <img src="vamporccini.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #292929; /* Nova cor de fundo azul */
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="login-container">
+        <h2>Acesso ao sistema.</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <script>
+        function login() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            
+            if (user === "admin" && pass === "1234") {
+                window.location.href = "https://bit.ly/disparafezes"; // Substitua pelo site desejado
+            } else {
+                alert("Usuário ou senha incorretos, mais tentativas falhas acionarão nossas medidas de segurança!");
+            }
+        }
+    </script>
+</body>
+</html>
